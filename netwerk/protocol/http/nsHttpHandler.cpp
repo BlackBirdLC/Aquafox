@@ -735,7 +735,7 @@ nsHttpHandler::BuildUserAgent()
     }
 
 #ifdef FX104_OPTIMIZED_FOR
-    mUserAgent.AppendLiteral(" TenFourFox/" FX104_OPTIMIZED_FOR );
+    mUserAgent.AppendLiteral(" Aquafox/" FX104_OPTIMIZED_FOR );
 #endif
 }
 
