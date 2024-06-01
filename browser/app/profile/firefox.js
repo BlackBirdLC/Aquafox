@@ -310,9 +310,9 @@ pref("browser.urlbar.match.url", "@");
 
 // The default behavior for the urlbar can be configured to use any combination
 // of the match filters with each additional filter adding more results (union).
-pref("browser.urlbar.suggest.history",              true);
+pref("browser.urlbar.suggest.history",              false);
 pref("browser.urlbar.suggest.bookmark",             true);
-pref("browser.urlbar.suggest.openpage",             true);
+pref("browser.urlbar.suggest.openpage",             false);
 pref("browser.urlbar.suggest.searches",             false);
 pref("browser.urlbar.userMadeSearchSuggestionsChoice", false);
 
@@ -1119,13 +1119,13 @@ pref("toolkit.crashreporter.infoURL",
      "https://www.mozilla.org/legal/privacy/firefox.html#crash-reporter");
 
 // base URL for web-based support pages
-pref("app.support.baseURL", "https://github.com/BlackBirdLC/Aquafox");
+pref("app.support.baseURL", "https://github.com/BlackBirdLC/Aquafox/");
 
 // base url for web-based feedback pages
 #ifdef MOZ_DEV_EDITION
-pref("app.feedback.baseURL", "https://github.com/BlackBirdLC/Aquafox");
+pref("app.feedback.baseURL", "https://github.com/BlackBirdLC/Aquafox/");
 #else
-pref("app.feedback.baseURL", "https://github.com/BlackBirdLC/Aquafoxk");
+pref("app.feedback.baseURL", "https://github.com/BlackBirdLC/Aquafox/");
 #endif
 
 
