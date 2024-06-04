@@ -4,7 +4,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 MOZ_APP_BASENAME=Aquafox
-MOZ_APP_VENDOR=wireless
+MOZ_APP_VENDOR=BlackBirdLC
 MOZ_UPDATER=
 MOZ_PHOENIX=1
 
