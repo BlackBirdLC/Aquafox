@@ -176,10 +176,10 @@
                     class="category"
                     value="paneTenFourFox"
                     helpTopic="prefs-tenfourfox-general"
-                    tooltiptext="Aquafox"
+                    tooltiptext="TFF Tweaks"
                     align="center">
         <image class="category-icon"/>
-        <label class="category-name" flex="1">Aquafox</label>
+        <label class="category-name" flex="1">TTF Tweaks</label>
       </richlistitem>
     </richlistbox>
 
