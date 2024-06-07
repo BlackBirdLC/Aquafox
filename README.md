@@ -1,20 +1,51 @@
-# Aquafox: a new hope
+# Aquafox: A New Hope
 
-Precompiled TenFourFox builds with a few tweaks borrowed from InterWebPPC.
+![image](browser/branding/unofficial/content/about.png)
 
----
+Aquafox picks up where InterWebPPC left off by providing up-to-date precompiled binaries of TenFourFox.
 
-# TenFourFox: Mozilla for Power Macintosh
+## Table of Contents
+- [Description](#description)
+- [Q&A](#qa)
+- [Installation](#installation)
+- [Thanks To](#thanks-to)
+- [License](#license)
 
-A fork of Firefox to maintain support for the Power Mac, supporting Mac OS X 10.4 and 10.5, with special features and optimizations for PowerPC processors and AltiVec. _This project is not affiliated with nor supported by Mozilla in any way, and is not an official build._ **PowerPC forever!**
+## Description
+TenFourFox has been in "hobby mode" since October 2021, and no new official builds have been released since. This doesn't mean that the browser is dead; Cameron Kaiser periodically pushes security updates and bug fixes. Aquafox takes the upstream code from TenFourFox and applies most of wicknix's optimizations found in InterWebPPC.
 
-This project is specifically for Mac OS X 10.4+. If you're looking for a browser for Mac OS 8.6-10.3, look at our sister project, [Classilla](http://www.classilla.org/).
+## Q&A
 
-**TenFourFox is a "hobby" project: you build it yourself, with no guarantees on updates, update frequency, security or stability.** Our Github project site houses our source code, [documentation wiki](https://github.com/classilla/tenfourfox/wiki) with complete build instructions, and [the current worklist](https://github.com/classilla/tenfourfox/issues). For archived downloads, language packs and contributed tools, visit our [SourceForge download repository](https://sourceforge.net/projects/tenfourfox/files/). **There is no support for any version of TenFourFox.** The current update source is Firefox 115ESR.
+**Q: Why a fork with a different name? Why not just compile TenFourFox and host the binaries at the Macintosh Garden?**
+**A:** Cameron Kaiser states that "If you choose to make your own builds and release them to users, please use a different name for your builds than TenFourFox so that I don't get bothered for support for your work."
 
-**If you file a Github issue without a patch, or without declaring your intention to file a pull request addressing that issue, it may be summarily closed or deleted at the maintainer's sole discretion.** The issue list is an active worklist, and if no work will occur on an issue, even if the issue is real and verifiable, it will be closed. There are lots of acknowledged deficiencies in TenFourFox and not everyone is going to prioritize a deficiency the way you might. If you are not willing or able to fix your most important issues yourself, you may not want to use this browser.
+**Q: What's the difference between Aquafox and InterWebPPC?**
+**A:** For now, it's just a more updated version with a new look. You can see Aquafox as a spiritual successor to InterWebPPC.
 
-The `wiki/` branch contains old documentation and release notes from our former Google Code wiki. They are no longer updated or maintained. Take care as links in those documents have probably rotted.
+**Q: Why not use InterWebPPC instead?**
+**A:** InterWebPPC's last release (RR4) is from May 2023 and lacks the August 2023 patchset. This build is also not reproducible as the code in the repository hasn't been updated since November 2022 and produces a broken version of RR3.
 
-Follow the [TenFourFox Development](http://tenfourfox.blogspot.com/) blog!
+**Q: Why Aqua?**
+**A:** Aqua is the GUI of Mac OS X. To me specifically, Aqua is the glossy blue UI found in the early versions before Leopard.
 
+**Q: You mention early versions, does that mean Aquafox works on Panther and earlier?**
+**A:** No, only Tiger and Leopard. The Aqua part is just a name I think fits it well.
+
+**Q: You speak of precompiled binaries, but I don't see any. Where are they?**
+**A:** They'll arrive as soon as they're ready for release. I intend to test builds on the appropriate systems—G3, G4-7400, G4-7450, and G5—before release.
+
+**Q: So we're getting different builds again?**
+**A:** You bet.
+
+**Q: Are there any plans for extra features?**
+**A:** This is something I will look into after the first release.
+
+## Installation
+*Installation instructions will be provided once the precompiled binaries are available.*
+
+## Thanks To:
+- [Cameron Kaiser](https://github.com/classilla) for all the years of work developing and maintaining [TenFourFox](https://github.com/classilla/tenfourfox).
+- [wicknix](https://github.com/wicknix) for their work on [InterWebPPC](https://github.com/wicknix/InterWebPPC), laying down the framework Aquafox builds upon.
+
+## License
+This project is licensed under the terms of the [Mozilla Public License 2.0](https://www.mozilla.org/MPL/2.0/).
