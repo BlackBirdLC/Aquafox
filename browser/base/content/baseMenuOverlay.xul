@@ -43,7 +43,7 @@
 #endif
       <menupopup id="menu_HelpPopup" onpopupshowing="buildHelpMenu();">
         <menuitem id="menu_openHelp"
-                  oncommand="openHelpLink('firefox-help')"
+                  oncommand="openHelpLink('')"
                   onclick="checkForMiddleClick(this, event);"
                   label="&productHelp2.label;"
                   accesskey="&productHelp2.accesskey;"
@@ -51,22 +51,6 @@
                   key="key_openHelpMac"/>
 #else
                   />
-#endif
-        <menuitem id="menu_openTour"
-                  oncommand="openTourPage();"
-                  label="&helpShowTour2.label;"
-                  accesskey="&helpShowTour2.accesskey;"/>
-        <menuitem id="menu_keyboardShortcuts"
-                  oncommand="openHelpLink('keyboard-shortcuts')"
-                  onclick="checkForMiddleClick(this, event);"
-                  label="&helpKeyboardShortcuts.label;"
-                  accesskey="&helpKeyboardShortcuts.accesskey;"/>
-#ifdef MOZ_SERVICES_HEALTHREPORT
-        <menuitem id="healthReport"
-                  label="&healthReport2.label;"
-                  accesskey="&healthReport2.accesskey;"
-                  oncommand="openHealthReport()"
-                  onclick="checkForMiddleClick(this, event);"/>
 #endif
         <menuitem id="troubleShooting"
                   accesskey="&helpTroubleshootingInfo.accesskey;"
