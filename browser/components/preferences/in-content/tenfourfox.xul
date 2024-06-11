@@ -32,8 +32,6 @@
       hidden="true"
       data-category="paneTenFourFox">
   <label class="header-name" flex="1">TFF Settings</label>
-  <button class="help-button"
-          aria-label="&helpButton.label;"/>
 </hbox>
 
 <groupbox id="mseModeGroup" data-category="paneTenFourFox" hidden="true">
