@@ -51,7 +51,6 @@ function init_all() {
   register_module("paneAdvanced", gAdvancedPane);
   register_module("paneApplications", gApplicationsPane);
   register_module("paneContent", gContentPane);
-  register_module("paneSync", gSyncPane);
   register_module("paneSecurity", gSecurityPane);
   register_module("paneTenFourFox", gTenFourFoxPane);
 
