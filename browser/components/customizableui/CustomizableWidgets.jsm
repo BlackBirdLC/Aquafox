@@ -398,47 +398,6 @@ const CustomizableWidgets = [
       fillSubviewFromMenuItems([...menu.children], sidebarItems);
     }
   }, {
-    id: "social-share-button",
-    // custom build our button so we can attach to the share command
-    type: "custom",
-    onBuild: function(aDocument) {
-      let node = aDocument.createElementNS(kNSXUL, "toolbarbutton");
-      node.setAttribute("id", this.id);
-      node.classList.add("toolbarbutton-1");
-      node.classList.add("chromeclass-toolbar-additional");
-      node.setAttribute("label", CustomizableUI.getLocalizedProperty(this, "label"));
-      node.setAttribute("tooltiptext", CustomizableUI.getLocalizedProperty(this, "tooltiptext"));
-      node.setAttribute("removable", "true");
-      node.setAttribute("observes", "Social:PageShareOrMark");
-      node.setAttribute("command", "Social:SharePage");
-
-      let listener = {
-        onWidgetAdded: (aWidgetId) => {
-          if (aWidgetId != this.id)
-            return;
-
-          Services.obs.notifyObservers(null, "social:" + this.id + "-added", null);
-        },
-
-        onWidgetRemoved: aWidgetId => {
-          if (aWidgetId != this.id)
-            return;
-
-          Services.obs.notifyObservers(null, "social:" + this.id + "-removed", null);
-        },
-
-        onWidgetInstanceRemoved: (aWidgetId, aDoc) => {
-          if (aWidgetId != this.id || aDoc != aDocument)
-            return;
-
-          CustomizableUI.removeListener(listener);
-        }
-      };
-      CustomizableUI.addListener(listener);
-
-      return node;
-    }
-  }, {
     id: "add-ons-button",
     shortcutId: "key_openAddons",
     tooltiptext: "add-ons-button.tooltiptext3",
