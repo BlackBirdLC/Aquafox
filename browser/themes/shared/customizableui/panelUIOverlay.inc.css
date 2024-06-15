@@ -552,7 +552,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
 }
 
 #PanelUI-fxa-status {
-  display: flex;
+  display: none;
   flex: 1 1 0%;
   width: 1px;
 }
