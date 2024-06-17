@@ -199,9 +199,9 @@ pref("extensions.dss.switchPending", false);    // Non-dynamic switch pending af
 pref("extensions.{972ce4c6-7e08-4474-a285-3208198ce6fd}.name", "chrome://browser/locale/browser.properties");
 pref("extensions.{972ce4c6-7e08-4474-a285-3208198ce6fd}.description", "chrome://browser/locale/browser.properties");
 
-pref("lightweightThemes.update.enabled", false);
-pref("lightweightThemes.getMoreURL", "");
-pref("lightweightThemes.recommendedThemes", "");
+pref("lightweightThemes.update.enabled", true);
+pref("lightweightThemes.getMoreURL", "https://addons.mozilla.org/%LOCALE%/firefox/themes");
+pref("lightweightThemes.recommendedThemes", "[{\"id\":\"recommended-1\",\"homepageURL\":\"https://addons.mozilla.org/firefox/addon/a-web-browser-renaissance/\",\"headerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/1.header.jpg\",\"footerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/1.footer.jpg\",\"textcolor\":\"#000000\",\"accentcolor\":\"#f2d9b1\",\"iconURL\":\"resource:///chrome/browser/content/browser/defaultthemes/1.icon.jpg\",\"previewURL\":\"resource:///chrome/browser/content/browser/defaultthemes/1.preview.jpg\",\"author\":\"Sean.Martell\",\"version\":\"0\"},{\"id\":\"recommended-2\",\"homepageURL\":\"https://addons.mozilla.org/firefox/addon/space-fantasy/\",\"headerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/2.header.jpg\",\"footerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/2.footer.jpg\",\"textcolor\":\"#ffffff\",\"accentcolor\":\"#d9d9d9\",\"iconURL\":\"resource:///chrome/browser/content/browser/defaultthemes/2.icon.jpg\",\"previewURL\":\"resource:///chrome/browser/content/browser/defaultthemes/2.preview.jpg\",\"author\":\"fx5800p\",\"version\":\"1.0\"},{\"id\":\"recommended-3\",\"homepageURL\":\"https://addons.mozilla.org/firefox/addon/linen-light/\",\"headerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/3.header.png\",\"footerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/3.footer.png\",\"accentcolor\":\"#ada8a8\",\"iconURL\":\"resource:///chrome/browser/content/browser/defaultthemes/3.icon.png\",\"previewURL\":\"resource:///chrome/browser/content/browser/defaultthemes/3.preview.png\",\"author\":\"DVemer\",\"version\":\"1.0\"},{\"id\":\"recommended-4\",\"homepageURL\":\"https://addons.mozilla.org/firefox/addon/pastel-gradient/\",\"headerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/4.header.png\",\"footerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/4.footer.png\",\"textcolor\":\"#000000\",\"accentcolor\":\"#000000\",\"iconURL\":\"resource:///chrome/browser/content/browser/defaultthemes/4.icon.png\",\"previewURL\":\"resource:///chrome/browser/content/browser/defaultthemes/4.preview.png\",\"author\":\"darrinhenein\",\"version\":\"1.0\"},{\"id\":\"recommended-5\",\"homepageURL\":\"https://addons.mozilla.org/firefox/addon/carbon-light/\",\"headerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/5.header.png\",\"footerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/5.footer.png\",\"textcolor\":\"#3b3b3b\",\"accentcolor\":\"#2e2e2e\",\"iconURL\":\"resource:///chrome/browser/content/browser/defaultthemes/5.icon.jpg\",\"previewURL\":\"resource:///chrome/browser/content/browser/defaultthemes/5.preview.jpg\",\"author\":\"Jaxivo\",\"version\":\"1.0\"}]");
 
 pref("browser.eme.ui.enabled", false);
 
@@ -1240,77 +1240,81 @@ pref("browser.taskbar.lists.tasks.enabled", true);
 pref("browser.taskbar.lists.refreshInSeconds", 120);
 #endif
 
+// Disable sync
+pref("services.sync.enabled", false);
+pref("identity.fxaccounts.enabled", false);
+
 // The sync engines to use.
-pref("services.sync.registerEngines", "Bookmarks,Form,History,Password,Prefs,Tab,Addons");
+pref("services.sync.registerEngines", "");
 // Preferences to be synced by default
-pref("services.sync.prefs.sync.accessibility.blockautorefresh", true);
-pref("services.sync.prefs.sync.accessibility.browsewithcaret", true);
-pref("services.sync.prefs.sync.accessibility.typeaheadfind", true);
-pref("services.sync.prefs.sync.accessibility.typeaheadfind.linksonly", true);
-pref("services.sync.prefs.sync.addons.ignoreUserEnabledChanges", true);
+pref("services.sync.prefs.sync.accessibility.blockautorefresh", false);
+pref("services.sync.prefs.sync.accessibility.browsewithcaret", false);
+pref("services.sync.prefs.sync.accessibility.typeaheadfind", false);
+pref("services.sync.prefs.sync.accessibility.typeaheadfind.linksonly", false);
+pref("services.sync.prefs.sync.addons.ignoreUserEnabledChanges", false);
 // The addons prefs related to repository verification are intentionally
 // not synced for security reasons. If a system is compromised, a user
 // could weaken the pref locally, install an add-on from an untrusted
 // source, and this would propagate automatically to other,
 // uncompromised Sync-connected devices.
-pref("services.sync.prefs.sync.app.update.mode", true);
-pref("services.sync.prefs.sync.browser.formfill.enable", true);
-pref("services.sync.prefs.sync.browser.link.open_newwindow", true);
-pref("services.sync.prefs.sync.browser.newtabpage.enabled", true);
-pref("services.sync.prefs.sync.browser.newtabpage.enhanced", true);
-pref("services.sync.prefs.sync.browser.newtabpage.pinned", true);
-pref("services.sync.prefs.sync.browser.offline-apps.notify", true);
-pref("services.sync.prefs.sync.browser.safebrowsing.enabled", true);
-pref("services.sync.prefs.sync.browser.safebrowsing.malware.enabled", true);
-pref("services.sync.prefs.sync.browser.search.update", true);
-pref("services.sync.prefs.sync.browser.sessionstore.restore_on_demand", true);
-pref("services.sync.prefs.sync.browser.startup.homepage", true);
-pref("services.sync.prefs.sync.browser.startup.page", true);
-pref("services.sync.prefs.sync.browser.tabs.loadInBackground", true);
-pref("services.sync.prefs.sync.browser.tabs.warnOnClose", true);
-pref("services.sync.prefs.sync.browser.tabs.warnOnOpen", true);
-pref("services.sync.prefs.sync.browser.urlbar.autocomplete.enabled", true);
-pref("services.sync.prefs.sync.browser.urlbar.maxRichResults", true);
-pref("services.sync.prefs.sync.dom.disable_open_during_load", true);
-pref("services.sync.prefs.sync.dom.disable_window_flip", true);
-pref("services.sync.prefs.sync.dom.disable_window_move_resize", true);
-pref("services.sync.prefs.sync.dom.event.contextmenu.enabled", true);
-pref("services.sync.prefs.sync.extensions.personas.current", true);
-pref("services.sync.prefs.sync.extensions.update.enabled", true);
-pref("services.sync.prefs.sync.intl.accept_languages", true);
-pref("services.sync.prefs.sync.javascript.enabled", true);
-pref("services.sync.prefs.sync.layout.spellcheckDefault", true);
-pref("services.sync.prefs.sync.lightweightThemes.selectedThemeID", true);
-pref("services.sync.prefs.sync.lightweightThemes.usedThemes", true);
-pref("services.sync.prefs.sync.network.cookie.cookieBehavior", true);
-pref("services.sync.prefs.sync.network.cookie.lifetimePolicy", true);
-pref("services.sync.prefs.sync.network.cookie.lifetime.days", true);
-pref("services.sync.prefs.sync.network.cookie.thirdparty.sessionOnly", true);
-pref("services.sync.prefs.sync.permissions.default.image", true);
-pref("services.sync.prefs.sync.pref.advanced.images.disable_button.view_image", true);
-pref("services.sync.prefs.sync.pref.advanced.javascript.disable_button.advanced", true);
-pref("services.sync.prefs.sync.pref.downloads.disable_button.edit_actions", true);
-pref("services.sync.prefs.sync.pref.privacy.disable_button.cookie_exceptions", true);
-pref("services.sync.prefs.sync.privacy.clearOnShutdown.cache", true);
-pref("services.sync.prefs.sync.privacy.clearOnShutdown.cookies", true);
-pref("services.sync.prefs.sync.privacy.clearOnShutdown.downloads", true);
-pref("services.sync.prefs.sync.privacy.clearOnShutdown.formdata", true);
-pref("services.sync.prefs.sync.privacy.clearOnShutdown.history", true);
-pref("services.sync.prefs.sync.privacy.clearOnShutdown.offlineApps", true);
-pref("services.sync.prefs.sync.privacy.clearOnShutdown.sessions", true);
-pref("services.sync.prefs.sync.privacy.clearOnShutdown.siteSettings", true);
-pref("services.sync.prefs.sync.privacy.donottrackheader.enabled", true);
-pref("services.sync.prefs.sync.privacy.sanitize.sanitizeOnShutdown", true);
-pref("services.sync.prefs.sync.privacy.trackingprotection.enabled", true);
-pref("services.sync.prefs.sync.privacy.trackingprotection.pbmode.enabled", true);
-pref("services.sync.prefs.sync.security.OCSP.enabled", true);
-pref("services.sync.prefs.sync.security.OCSP.require", true);
-pref("services.sync.prefs.sync.security.default_personal_cert", true);
-pref("services.sync.prefs.sync.security.tls.version.min", true);
-pref("services.sync.prefs.sync.security.tls.version.max", true);
-pref("services.sync.prefs.sync.signon.rememberSignons", true);
-pref("services.sync.prefs.sync.spellchecker.dictionary", true);
-pref("services.sync.prefs.sync.xpinstall.whitelist.required", true);
+pref("services.sync.prefs.sync.app.update.mode", false);
+pref("services.sync.prefs.sync.browser.formfill.enable", false);
+pref("services.sync.prefs.sync.browser.link.open_newwindow", false);
+pref("services.sync.prefs.sync.browser.newtabpage.enabled", false);
+pref("services.sync.prefs.sync.browser.newtabpage.enhanced", false);
+pref("services.sync.prefs.sync.browser.newtabpage.pinned", false);
+pref("services.sync.prefs.sync.browser.offline-apps.notify", false);
+pref("services.sync.prefs.sync.browser.safebrowsing.enabled", false);
+pref("services.sync.prefs.sync.browser.safebrowsing.malware.enabled", false);
+pref("services.sync.prefs.sync.browser.search.update", false);
+pref("services.sync.prefs.sync.browser.sessionstore.restore_on_demand", false);
+pref("services.sync.prefs.sync.browser.startup.homepage", false);
+pref("services.sync.prefs.sync.browser.startup.page", false);
+pref("services.sync.prefs.sync.browser.tabs.loadInBackground", false);
+pref("services.sync.prefs.sync.browser.tabs.warnOnClose", false);
+pref("services.sync.prefs.sync.browser.tabs.warnOnOpen", false);
+pref("services.sync.prefs.sync.browser.urlbar.autocomplete.enabled", false);
+pref("services.sync.prefs.sync.browser.urlbar.maxRichResults", false);
+pref("services.sync.prefs.sync.dom.disable_open_during_load", false);
+pref("services.sync.prefs.sync.dom.disable_window_flip", false);
+pref("services.sync.prefs.sync.dom.disable_window_move_resize", false);
+pref("services.sync.prefs.sync.dom.event.contextmenu.enabled", false);
+pref("services.sync.prefs.sync.extensions.personas.current", false);
+pref("services.sync.prefs.sync.extensions.update.enabled", false);
+pref("services.sync.prefs.sync.intl.accept_languages", false);
+pref("services.sync.prefs.sync.javascript.enabled", false);
+pref("services.sync.prefs.sync.layout.spellcheckDefault", false);
+pref("services.sync.prefs.sync.lightweightThemes.selectedThemeID", false);
+pref("services.sync.prefs.sync.lightweightThemes.usedThemes", false);
+pref("services.sync.prefs.sync.network.cookie.cookieBehavior", false);
+pref("services.sync.prefs.sync.network.cookie.lifetimePolicy", false);
+pref("services.sync.prefs.sync.network.cookie.lifetime.days", false);
+pref("services.sync.prefs.sync.network.cookie.thirdparty.sessionOnly", false);
+pref("services.sync.prefs.sync.permissions.default.image", false);
+pref("services.sync.prefs.sync.pref.advanced.images.disable_button.view_image", false);
+pref("services.sync.prefs.sync.pref.advanced.javascript.disable_button.advanced", false);
+pref("services.sync.prefs.sync.pref.downloads.disable_button.edit_actions", false);
+pref("services.sync.prefs.sync.pref.privacy.disable_button.cookie_exceptions", false);
+pref("services.sync.prefs.sync.privacy.clearOnShutdown.cache", false);
+pref("services.sync.prefs.sync.privacy.clearOnShutdown.cookies", false);
+pref("services.sync.prefs.sync.privacy.clearOnShutdown.downloads", false);
+pref("services.sync.prefs.sync.privacy.clearOnShutdown.formdata", false);
+pref("services.sync.prefs.sync.privacy.clearOnShutdown.history", false);
+pref("services.sync.prefs.sync.privacy.clearOnShutdown.offlineApps", false);
+pref("services.sync.prefs.sync.privacy.clearOnShutdown.sessions", false);
+pref("services.sync.prefs.sync.privacy.clearOnShutdown.siteSettings", false);
+pref("services.sync.prefs.sync.privacy.donottrackheader.enabled", false);
+pref("services.sync.prefs.sync.privacy.sanitize.sanitizeOnShutdown", false);
+pref("services.sync.prefs.sync.privacy.trackingprotection.enabled", false);
+pref("services.sync.prefs.sync.privacy.trackingprotection.pbmode.enabled", false);
+pref("services.sync.prefs.sync.security.OCSP.enabled", false);
+pref("services.sync.prefs.sync.security.OCSP.require", false);
+pref("services.sync.prefs.sync.security.default_personal_cert", false);
+pref("services.sync.prefs.sync.security.tls.version.min", false);
+pref("services.sync.prefs.sync.security.tls.version.max", false);
+pref("services.sync.prefs.sync.signon.rememberSignons", false);
+pref("services.sync.prefs.sync.spellchecker.dictionary", false);
+pref("services.sync.prefs.sync.xpinstall.whitelist.required", false);
 
 #ifdef NIGHTLY_BUILD
 pref("services.sync.syncedTabsUIRefresh", true);
