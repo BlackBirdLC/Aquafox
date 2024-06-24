@@ -245,7 +245,7 @@ pref("browser.startup.homepage",            "chrome://branding/locale/browsercon
 
 pref("browser.slowStartup.notificationDisabled", true); // STFU!
 pref("browser.slowStartup.timeThreshold", 40000);
-pref("browser.slowStartup.maxSamples", 5);
+pref("browser.slowStartup.maxSamples", 0);
 
 // This url, if changed, MUST continue to point to an https url. Pulling arbitrary content to inject into
 // this page over http opens us up to a man-in-the-middle attack that we'd rather not face. If you are a downstream
@@ -467,7 +467,7 @@ pref("browser.bookmarks.autoExportHTML",          false);
 // keep in {PROFILEDIR}/bookmarkbackups. Special values:
 // -1: unlimited
 //  0: no backups created (and deletes all existing backups)
-pref("browser.bookmarks.max_backups",             15);
+pref("browser.bookmarks.max_backups",             5);
 
 // Scripts & Windows prefs
 pref("dom.disable_open_during_load",              true);
@@ -1214,7 +1214,7 @@ pref("security.sandbox.windows.log.stackTraceDepth", 0);
 // This setting is read when the content process is started. On Mac the content
 // process is killed when all windows are closed, so a change will take effect
 // when the 1st window is opened.
-pref("security.sandbox.content.level", 0);
+pref("security.sandbox.content.level", 1);
 #endif
 
 // This pref governs whether we attempt to work around problems caused by
@@ -1345,10 +1345,10 @@ pref("browser.newtab.preload", true);
 pref("browser.newtabpage.introShown", false);
 
 // Toggles the content of 'about:newtab'. Shows the grid when enabled.
-pref("browser.newtabpage.enabled", true);
+pref("browser.newtabpage.enabled", false);
 
 // Toggles the enhanced content of 'about:newtab'. Shows sponsored tiles.
-sticky_pref("browser.newtabpage.enhanced", true);
+sticky_pref("browser.newtabpage.enhanced", false);
 
 // number of rows of newtab grid
 pref("browser.newtabpage.rows", 3);
@@ -1440,7 +1440,7 @@ pref("geo.wifi.uri", "");
 #ifdef RELEASE_BUILD
 pref("geo.provider.use_corelocation", false);
 #else
-pref("geo.provider.use_corelocation", true);
+pref("geo.provider.use_corelocation", false);
 #endif
 #endif
 
