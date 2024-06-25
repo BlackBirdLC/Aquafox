@@ -263,7 +263,7 @@ pref("browser.warnOnQuit", true);
 // might still show the window closing dialog with showQuitWarning == false.
 pref("browser.showQuitWarning", false);
 pref("browser.fullscreen.autohide", true);
-pref("browser.fullscreen.animate", true);
+pref("browser.fullscreen.animate", false);
 pref("browser.overlink-delay", 80);
 
 #ifdef UNIX_BUT_NOT_MAC
@@ -291,11 +291,11 @@ pref("browser.urlbar.matchBehavior", 1);
 pref("browser.urlbar.filter.javascript", true);
 
 // the maximum number of results to show in autocomplete when doing richResults
-pref("browser.urlbar.maxRichResults", 6);
+pref("browser.urlbar.maxRichResults", 3);
 // The amount of time (ms) to wait after the user has stopped typing
 // before starting to perform autocomplete.  50 is the default set in
 // autocomplete.xml.
-pref("browser.urlbar.delay", 250);
+pref("browser.urlbar.delay", 0);
 
 // The special characters below can be typed into the urlbar to either restrict
 // the search to visited history, bookmarked, tagged pages; or force a match on
@@ -396,7 +396,7 @@ pref("browser.search.redirectWindowsSearch", false);
 pref("browser.usedOnWindows10", false);
 pref("browser.usedOnWindows10.introURL", "https://www.mozilla.org/%LOCALE%/firefox/windows-10/welcome/?utm_source=firefox-browser&utm_medium=firefox-browser");
 
-pref("browser.sessionhistory.max_entries", 50);
+pref("browser.sessionhistory.max_entries", 9);
 
 // Built-in default permissions.
 pref("permissions.manager.defaultsUrl", "resource://app/defaults/permissions");
@@ -438,7 +438,7 @@ pref("browser.tabs.opentabfor.middleclick", true);
 pref("browser.tabs.loadDivertedInBackground", false);
 pref("browser.tabs.loadBookmarksInBackground", false);
 pref("browser.tabs.tabClipWidth", 140);
-pref("browser.tabs.animate", true);
+pref("browser.tabs.animate", false);
 #ifdef UNIX_BUT_NOT_MAC
 pref("browser.tabs.drawInTitlebar", false);
 #else
@@ -1014,7 +1014,7 @@ pref("browser.sessionstore.resume_from_crash", true);
 pref("browser.sessionstore.resume_session_once", false);
 
 // minimal interval between two save operations in milliseconds
-pref("browser.sessionstore.interval", 60000);
+pref("browser.sessionstore.interval", 300000);
 // on which sites to save text data, POSTDATA and cookies
 // 0 = everywhere, 1 = unencrypted sites, 2 = nowhere
 pref("browser.sessionstore.privacy_level", 0);
@@ -1602,14 +1602,14 @@ pref("dom.ipc.cpow.timeout", 500);
 
 // Enable e10s hang monitoring (slow script checking and plugin hang
 // detection).
-pref("dom.ipc.processHangMonitor", true);
+pref("dom.ipc.processHangMonitor", false);
 
 #ifdef DEBUG
 // Don't report hangs in DEBUG builds. They're too slow and often a
 // debugger is attached.
 pref("dom.ipc.reportProcessHangs", false);
 #else
-pref("dom.ipc.reportProcessHangs", true);
+pref("dom.ipc.reportProcessHangs", false);
 #endif
 
 pref("browser.reader.detectedFirstArticle", false);
