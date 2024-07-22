@@ -45,7 +45,10 @@ TenFourFox has been in "hobby mode" since October 2021, and no new official buil
 
 ## Thanks To:
 - [Cameron Kaiser](https://github.com/classilla) for all the years of work developing and maintaining [TenFourFox](https://github.com/classilla/tenfourfox).
-- [wicknix](https://github.com/wicknix) for their work on [InterWebPPC](https://github.com/wicknix/InterWebPPC), laying down the framework Aquafox builds upon.
+- [wicknix](https://github.com/wicknix) for their work on [InterWebPPC](https://github.com/wicknix/InterWebPPC), paving the way for Aquafox.
+- [Chris Jones](https://github.com/llamallama) for providing a portable building environment in the form of [tenfourfox-toolkit-scripts](https://github.com/llamallama/tenfourfox-toolkit-scripts).
+- [zgxSystems](https://github.com/zgxSystems) for their configuration script [foxPEP](https://github.com/zgxSystems/foxPEP).
+- [Zac](https://github.com/trash-guy) for helping me make the Aquafox logo.
 
 ## License
 This project is licensed under the terms of the [Mozilla Public License 2.0](https://www.mozilla.org/MPL/2.0/).
