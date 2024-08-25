@@ -15,7 +15,6 @@ Aquafox picks up where InterWebPPC left off by providing up-to-date precompiled 
 TenFourFox has been in "hobby mode" since October 2021, and no new official builds have been released since. This doesn't mean that the browser is dead; Cameron Kaiser periodically pushes security updates and bug fixes. Aquafox takes the upstream code from TenFourFox and applies most of wicknix's optimizations found in InterWebPPC.
 
 ## Q&A
-
 **Q: Why a fork with a different name? Why not just compile TenFourFox and host the binaries at the Macintosh Garden?**
 **A:** Cameron Kaiser states that "If you choose to make your own builds and release them to users, please use a different name for your builds than TenFourFox so that I don't get bothered for support for your work."
 
@@ -32,16 +31,29 @@ TenFourFox has been in "hobby mode" since October 2021, and no new official buil
 **A:** No, only Tiger and Leopard. The Aqua part is just a name I think fits it well.
 
 **Q: You speak of precompiled binaries, but I don't see any. Where are they?**
-**A:** They'll arrive as soon as they're ready for release. I intend to test builds on the appropriate systems—G3, G4-7400, G4-7450, and G5—before release.
-
-**Q: So we're getting different builds again?**
-**A:** You bet.
+**A:** They are in the [Releases](https://github.com/BlackBirdLC/Aquafox/releases) section.
 
 **Q: Are there any plans for extra features?**
-**A:** This is something I will look into after the first release.
+**A:** This is something I will look into in the future.
+
+**Q: How can I help?**
+**A:** Contributing to Aquafox is highly appreciated, and any help is welcome! Whether it's coding, testing, or simply spreading the word, every bit counts.
+
+To help promote Aquafox, you can use the following buttons on your website:
+
+![Download Aquafox!](https://thewireless.neocities.org/images/buttons/download_aquafox_88x31.gif)
+```html
+<a href="https://github.com/BlackBirdLC/Aquafox/" target="_blank"><img src="https://thewireless.neocities.org/images/buttons/download_aquafox_88x31.gif" alt="Download Aquafox!" title="Mozilla for Mac OS X Tiger and Leopard."></a>
+```
+
+![Get Aquafox!](https://thewireless.neocities.org/images/buttons/get_aquafox_88x31.gif)
+```html
+<a href="https://github.com/BlackBirdLC/Aquafox/" target="_blank"><img src="https://thewireless.neocities.org/images/buttons/get_aquafox_88x31.gif" alt="Get Aquafox!" title="Mozilla for Mac OS X Tiger and Leopard."></a>
+```
+*(You might want to host these images yourself to prevent hotlinking.)*
 
 ## Installation
-*Installation instructions will be provided once the precompiled binaries are available.*
+Mount the downloaded .dmg file and drag Aquafox into your Applications folder.
 
 ## Thanks To:
 - [Cameron Kaiser](https://github.com/classilla) for all the years of work developing and maintaining [TenFourFox](https://github.com/classilla/tenfourfox).
