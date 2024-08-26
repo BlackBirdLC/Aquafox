@@ -1,0 +1,6 @@
+.inline-block {
+    display: -moz-inline-box;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom:3px;
+}
