@@ -10,7 +10,7 @@ print <<'EOF';
 /* nsSiteSecurityService.cpp, you shouldn't be #including it.                */
 /*****************************************************************************/
 
-/* imported from ESR115 by TenFourFox conversion script */
+/* imported from ESR128 by TenFourFox conversion script */
 
 #include <stdint.h>
 EOF
