@@ -26,7 +26,7 @@ var version = document.getElementById("version");
 
 // paranoia
 if (1 == 1) {
-  version.textContent = "1.0.0";
+  version.textContent = "dev";
 } else if (versionNum.substr(0,3) == "45.") {
   // FPR series
   var vf = 0 + versionNum.substr(3);
