@@ -10,18 +10,12 @@ this.EXPORTED_SYMBOLS = ["CustomizableWidgets"];
 Cu.import("resource:///modules/CustomizableUI.jsm");
 Cu.import("resource://gre/modules/Services.jsm");
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
-/*
-XPCOMUtils.defineLazyModuleGetter(this, "BrowserUITelemetry",
-  "resource:///modules/BrowserUITelemetry.jsm");
-*/
 XPCOMUtils.defineLazyModuleGetter(this, "PlacesUtils",
   "resource://gre/modules/PlacesUtils.jsm");
 XPCOMUtils.defineLazyModuleGetter(this, "PlacesUIUtils",
   "resource:///modules/PlacesUIUtils.jsm");
 XPCOMUtils.defineLazyModuleGetter(this, "RecentlyClosedTabsAndWindowsMenuUtils",
   "resource:///modules/sessionstore/RecentlyClosedTabsAndWindowsMenuUtils.jsm");
-XPCOMUtils.defineLazyModuleGetter(this, "Pocket",
-  "resource:///modules/Pocket.jsm");
 XPCOMUtils.defineLazyModuleGetter(this, "ShortcutUtils",
   "resource://gre/modules/ShortcutUtils.jsm");
 XPCOMUtils.defineLazyModuleGetter(this, "CharsetMenu",
@@ -30,11 +24,6 @@ XPCOMUtils.defineLazyModuleGetter(this, "PrivateBrowsingUtils",
   "resource://gre/modules/PrivateBrowsingUtils.jsm");
 XPCOMUtils.defineLazyModuleGetter(this, "AddonManager",
   "resource://gre/modules/AddonManager.jsm");
-XPCOMUtils.defineLazyModuleGetter(this, "SocialService",
-  "resource://gre/modules/SocialService.jsm");
-XPCOMUtils.defineLazyModuleGetter(this, "SyncedTabs",
-  "resource://services-sync/SyncedTabs.jsm");
-
 XPCOMUtils.defineLazyGetter(this, "CharsetBundle", function() {
   const kCharsetBundle = "chrome://global/locale/charsetMenu.properties";
   return Services.strings.createBundle(kCharsetBundle);
@@ -246,13 +235,6 @@ const CustomizableWidgets = [
         recentlyClosedWindows.removeChild(recentlyClosedWindows.firstChild);
       }
 
-      let tabsFromOtherComputers = doc.getElementById("sync-tabs-menuitem2");
-      if (PlacesUIUtils.shouldShowTabsFromOtherComputersMenuitem()) {
-        tabsFromOtherComputers.removeAttribute("hidden");
-      } else {
-        tabsFromOtherComputers.setAttribute("hidden", true);
-      }
-
       let utils = RecentlyClosedTabsAndWindowsMenuUtils;
       let tabsFragment = utils.getTabsFragment(doc.defaultView, "toolbarbutton", true,
                                                "menuRestoreAllTabsSubview.label");
@@ -369,33 +351,6 @@ const CustomizableWidgets = [
       let developerItems = doc.getElementById("PanelUI-developerItems");
       clearSubview(developerItems);
       fillSubviewFromMenuItems(itemsToDisplay, developerItems);
-    }
-  }, {
-    id: "sidebar-button",
-    type: "view",
-    viewId: "PanelUI-sidebar",
-    tooltiptext: "sidebar-button.tooltiptext2",
-    onViewShowing: function(aEvent) {
-      // Largely duplicated from the developer-button above with a couple minor
-      // alterations.
-      // Populate the subview with whatever menuitems are in the
-      // sidebar menu. We skip menu elements, because the menu panel has no way
-      // of dealing with those right now.
-      let doc = aEvent.target.ownerDocument;
-      let win = doc.defaultView;
-      let menu = doc.getElementById("viewSidebarMenu");
-
-      // First clear any existing menuitems then populate. Social sidebar
-      // options may not have been added yet, so we do that here. Add it to the
-      // standard menu first, then copy all sidebar options to the panel.
-      win.SocialSidebar.clearProviderMenus();
-      let providerMenuSeps = menu.getElementsByClassName("social-provider-menu");
-      if (providerMenuSeps.length > 0)
-        win.SocialSidebar.populateProviderMenu(providerMenuSeps[0]);
-
-      let sidebarItems = doc.getElementById("PanelUI-sidebarItems");
-      clearSubview(sidebarItems);
-      fillSubviewFromMenuItems([...menu.children], sidebarItems);
     }
   }, {
     id: "add-ons-button",
@@ -934,7 +889,6 @@ if (Services.prefs.getBoolPref("privacy.panicButton.enabled")) {
       this._ensureSanitizer();
       this._sanitizer.range = this._getSanitizeRange(doc);
       let group = doc.getElementById("PanelUI-panic-timeSpan");
-      //BrowserUITelemetry.countPanicEvent(group.selectedItem.id);
       group.selectedItem = doc.getElementById("PanelUI-panic-5min");
       let itemsToClear = [
         "cookies", "history", "openWindows", "formdata", "sessions", "cache", "downloads"
@@ -971,68 +925,6 @@ if (Services.prefs.getBoolPref("privacy.panicButton.enabled")) {
       forgetButton.removeEventListener("command", this);
     },
   });
-}
-
-if (Services.prefs.getBoolPref("browser.pocket.enabled")) {
-  let isEnabledForLocale = true;
-  if (Services.prefs.getBoolPref("browser.pocket.useLocaleList")) {
-    let chromeRegistry = Cc["@mozilla.org/chrome/chrome-registry;1"]
-                           .getService(Ci.nsIXULChromeRegistry);
-    let browserLocale = chromeRegistry.getSelectedLocale("browser");
-    let enabledLocales = [];
-    try {
-      enabledLocales = Services.prefs.getCharPref("browser.pocket.enabledLocales").split(' ');
-    } catch (ex) {
-      Cu.reportError(ex);
-    }
-    isEnabledForLocale = enabledLocales.indexOf(browserLocale) != -1;
-  }
-
-  if (isEnabledForLocale) {
-    let pocketButton = {
-      id: "pocket-button",
-      defaultArea: CustomizableUI.AREA_NAVBAR,
-      introducedInVersion: "pref",
-      type: "view",
-      viewId: "PanelUI-pocketView",
-      // Use forwarding functions here to avoid loading Pocket.jsm on startup:
-      onViewShowing: function() {
-        return Pocket.onPanelViewShowing.apply(this, arguments);
-      },
-      onViewHiding: function() {
-        return Pocket.onPanelViewHiding.apply(this, arguments);
-      },
-
-      // If the user has the "classic" Pocket add-on installed, use that instead
-      // and destroy the widget.
-      conditionalDestroyPromise: new Promise(resolve => {
-        AddonManager.getAddonByID("isreaditlater@ideashower.com", addon => {
-          resolve(addon && addon.isActive);
-        });
-      }),
-    };
-
-    CustomizableWidgets.push(pocketButton);
-    CustomizableUI.addListener(pocketButton);
-
-    // Uninstall the Pocket social provider if it exists, but only if we haven't
-    // already uninstalled it in this manner.  That way the user can reinstall
-    // it if they prefer it without its being uninstalled every time they start
-    // the browser.
-    let origin = "https://getpocket.com";
-    SocialService.getProvider(origin, provider => {
-      if (provider) {
-        let pref = "social.backup.getpocket-com";
-        if (!Services.prefs.prefHasUserValue(pref)) {
-          let str = Cc["@mozilla.org/supports-string;1"].
-                    createInstance(Ci.nsISupportsString);
-          str.data = JSON.stringify(provider.manifest);
-          Services.prefs.setComplexValue(pref, Ci.nsISupportsString, str);
-          SocialService.uninstallProvider(origin, () => {});
-        }
-      }
-    });
-  }
 }
 
 #ifdef E10S_TESTING_ONLY

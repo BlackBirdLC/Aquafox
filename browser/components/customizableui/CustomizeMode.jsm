@@ -31,10 +31,7 @@ Cu.import("resource://gre/modules/AddonManager.jsm");
 
 XPCOMUtils.defineLazyModuleGetter(this, "DragPositionManager",
                                   "resource:///modules/DragPositionManager.jsm");
-/*
-XPCOMUtils.defineLazyModuleGetter(this, "BrowserUITelemetry",
-                                  "resource:///modules/BrowserUITelemetry.jsm");
-*/
+
 XPCOMUtils.defineLazyModuleGetter(this, "LightweightThemeManager",
                                   "resource://gre/modules/LightweightThemeManager.jsm");
 
@@ -1119,7 +1116,6 @@ CustomizeMode.prototype = {
     this.resetting = true;
     // Disable the reset button temporarily while resetting:
     let btn = this.document.getElementById("customization-reset-button");
-    //BrowserUITelemetry.countCustomizationEvent("reset");
     btn.disabled = true;
     return Task.spawn(function() {
       this._removePanelCustomizationPlaceholders();
@@ -1752,7 +1748,6 @@ CustomizeMode.prototype = {
         }
 
         CustomizableUI.removeWidgetFromArea(aDraggedItemId);
-        //BrowserUITelemetry.countCustomizationEvent("remove");
         // Special widgets are removed outright, we can return here:
         if (CustomizableUI.isSpecialWidget(aDraggedItemId)) {
           return;
@@ -1794,7 +1789,6 @@ CustomizeMode.prototype = {
         this.wrapToolbarItem(aTargetNode, place);
       }
       this.wrapToolbarItem(draggedItem, place);
-      //BrowserUITelemetry.countCustomizationEvent("move");
       return;
     }
 
@@ -1802,12 +1796,6 @@ CustomizeMode.prototype = {
     // widget to the end of the area.
     if (aTargetNode == aTargetArea.customizationTarget) {
       CustomizableUI.addWidgetToArea(aDraggedItemId, aTargetArea.id);
-      // For the purposes of BrowserUITelemetry, we consider both moving a widget
-      // within the same area, and adding a widget from one area to another area
-      // as a "move". An "add" is only when we move an item from the palette into
-      // an area.
-      //let custEventType = aOriginArea.id == kPaletteId ? "add" : "move";
-      //BrowserUITelemetry.countCustomizationEvent(custEventType);
       this._onDragEnd(aEvent);
       return;
     }
@@ -1846,11 +1834,6 @@ CustomizeMode.prototype = {
     }
 
     this._onDragEnd(aEvent);
-
-    // For BrowserUITelemetry, an "add" is only when we move an item from the palette
-    // into an area. Otherwise, it's a move.
-    //let custEventType = aOriginArea.id == kPaletteId ? "add" : "move";
-    //BrowserUITelemetry.countCustomizationEvent(custEventType);
 
     // If we dropped onto a skipintoolbarset item, manually correct the drop location:
     if (aTargetNode != itemForPlacement) {
