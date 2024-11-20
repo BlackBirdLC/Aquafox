@@ -757,8 +757,6 @@ nsScriptSecurityManager::CheckLoadURIWithPrincipal(nsIPrincipal* aPrincipal,
                 BLOK("coinhive.com") ||
                 BLOK("www.freecontent.stream") ||
                 BLOK("www.freecontent.stream.") ||
-                BLOK("allfontshere.press") || // caused crashes on VCF
-                BLOK("www.allfontshere.press") ||
 
                 // other obnoxious things
                 BLOK("c.amazon-adsystem.com") ||
@@ -821,8 +819,6 @@ nsScriptSecurityManager::CheckLoadURIWithPrincipal(nsIPrincipal* aPrincipal,
                 
                 BLOK("cdn.rta247.com") ||
 
-                BLOK("widget.perfectmarket.com") ||
-
                 BLOK("cdn.doubleverify.com") ||
                 BLOK("rtb0.doubleverify.com") ||
                 BLOK("rtbcdn.doubleverify.com") ||
@@ -875,9 +871,6 @@ nsScriptSecurityManager::CheckLoadURIWithPrincipal(nsIPrincipal* aPrincipal,
                 
                 BLOK("widgets.outbrain.com") ||
                 BLOK("amplify.outbrain.com") ||
-                
-                BLOK("cdn.krxd.net") ||
-                BLOK("beacon.krxd.net") ||
                 
                 BLOK("scdn.cxense.com") ||
                 BLOK("rscdn.cxense.com") ||
@@ -1001,9 +994,6 @@ nsScriptSecurityManager::CheckLoadURIWithPrincipal(nsIPrincipal* aPrincipal,
 
                 BLOK("vpaid.springserve.com") ||
 
-                BLOK("vd.ads.memevideoad.com") ||
-                BLOK("sp.ads.memevideoad.com") ||
-
                 BLOK("static.adsnative.com") ||
 
                 BLOK("cm.mgid.com") ||
@@ -1041,8 +1031,6 @@ nsScriptSecurityManager::CheckLoadURIWithPrincipal(nsIPrincipal* aPrincipal,
 
                 BLOK("c.evidon.com") ||
 
-                BLOK("api.content-ad.net") ||
-
                 BLOK("cdn.distiltag.com") ||
 
                 BLOK("my.hellobar.com") ||
@@ -1078,8 +1066,6 @@ nsScriptSecurityManager::CheckLoadURIWithPrincipal(nsIPrincipal* aPrincipal,
 
                 BLOK("ads.pubmatic.com") ||
 
-                BLOK("track.netshelter.net") ||
-
                 BLOK("t.neodatagroup.com") ||
 
                 BLOK("ads.servebom.com") ||
@@ -1091,9 +1077,6 @@ nsScriptSecurityManager::CheckLoadURIWithPrincipal(nsIPrincipal* aPrincipal,
                 BLOK("js.agkn.com") ||
 
                 BLOK("htl.bid") ||
-
-                BLOK("rtb.districtm.io") ||
-                BLOK("prebid.districtm.ca") ||
 
                 BLOK("speednetwork14.adk2.co") ||
                 BLOK("speednetwork14.adk2x.com") ||
@@ -1132,12 +1115,6 @@ nsScriptSecurityManager::CheckLoadURIWithPrincipal(nsIPrincipal* aPrincipal,
                 BLOK("spl.zeotap.com") ||
 
                 BLOK("cubchannel.com") ||
-
-                BLOK("a.intentmedia.net") ||
-                BLOK("a.cdn.intentmedia.net") ||
-
-                BLOK("ads.pictela.net") ||
-                BLOK("secure-ads.pictela.net") ||
 
                 BLOK("bid.contextweb.com") ||
                 BLOK("tag.contextweb.com") ||
