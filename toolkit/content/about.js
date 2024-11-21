@@ -24,19 +24,13 @@ var versionNum = Components.classes["@mozilla.org/xre/app-info;1"]
                            .version;
 var version = document.getElementById("version");
 
-// paranoia
-if (1 == 1) {
-  version.textContent = "1.0.0";
-} else if (versionNum.substr(0,3) == "45.") {
-  // FPR series
-  var vf = 0 + versionNum.substr(3);
-  var pl = ""+ (vf - (vf|0));
-  pl = ((0 + pl.substr(1) * 10)+0.001)|0; // damn float rounding
-  vf = vf|0; vf -= 9;
-  // XXX localize me
-  version.textContent = "Feature Parity Release "+vf+
-    ((pl > 0) ? " (Security Parity Release "+pl+")" : "")+
-    " ("+versionNum+")";
+if (versionNum.substr(0,3) == "45.") {
+  // Extract the major and minor version numbers
+  var majorMinor = versionNum.substr(3).split('.');
+  var major = parseInt(majorMinor[0]) - 40; // Major version (e.g., 42)
+  var minor = parseInt(majorMinor[1]); // Minor version (e.g., 0 or 1)
+
+  version.textContent = major + "." + minor + " (" + versionNum + ")";
 } else {
   version.textContent += " " + versionNum;
 }
