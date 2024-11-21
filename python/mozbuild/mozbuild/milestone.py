@@ -52,6 +52,14 @@ def get_milestone_minor(milestone):
     return milestone.split('.')[1]
 
 
+def get_milestone_patch(milestone):
+    """
+    Returns the patch (third) part of the milestone.
+    """
+
+    return milestone.split('.')[2]
+
+
 def main(args):
     parser = argparse.ArgumentParser()
     parser.add_argument('--uaversion', default=False, action='store_true')
@@ -71,8 +79,10 @@ def main(args):
         print(uaversion)
 
     elif options.fprversion:
-        # Compute the FPR from the milestone (basically - 9).
-        fprversion = "FPR%s" % (int(get_milestone_minor(milestone))-9,)
+        # Compute the modified version from the milestone (subtract 40 from the minor version).
+        fpr_minor = int(get_milestone_minor(milestone)) - 40
+        fpr_patch = get_milestone_patch(milestone)
+        fprversion = "%s.%s" % (fpr_minor, fpr_patch)
         print(fprversion)
 
     elif options.symbolversion:
