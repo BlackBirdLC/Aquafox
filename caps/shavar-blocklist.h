@@ -596,10 +596,6 @@
 //    https://vicinity.media/
         BLOK("vic-m.co") ||
         BLOKD(".vic-m.co") ||
-// Vidoomy
-//    https://www.vidoomy.com/
-        BLOK("vidoomy.com") ||
-        BLOKD(".vidoomy.com") ||
 // Warumbistdusoarm
 //    https://warumbistdusoarm.space
         BLOK("warumbistdusoarm.space") ||
