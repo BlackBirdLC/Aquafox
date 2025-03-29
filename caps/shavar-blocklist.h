@@ -114,10 +114,6 @@
 //    https://webmining.co/
         BLOK("webmining.co") ||
         BLOKD(".webmining.co") ||
-// AdaptMX
-//    https://adaptmx.com/
-        BLOK("a-mo.net") ||
-        BLOKD(".a-mo.net") ||
 // Adbot
 //    https://adbot.tw/
         BLOK("adbot.tw") ||
