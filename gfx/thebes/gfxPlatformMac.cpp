@@ -419,6 +419,7 @@ static const char kFontArialUnicodeMS[] = "Arial Unicode MS";
 static const char kFontAppleBraille[] = "Apple Braille";
 static const char kFontAppleColorEmoji[] = "Apple Color Emoji";
 static const char kFontAppleSymbols[] = "Apple Symbols";
+static const char kFontTwemojiMozilla[] = "Twemoji Mozilla";
 static const char kFontDevanagariSangamMN[] = "Devanagari Sangam MN";
 static const char kFontEuphemiaUCAS[] = "Euphemia UCAS";
 static const char kFontGeneva[] = "Geneva";
@@ -449,6 +450,7 @@ gfxPlatformMac::GetCommonFallbackFonts(uint32_t aCh, uint32_t aNextCh,
 {
     if (aNextCh == 0xfe0f) {
         aFontList.AppendElement(kFontAppleColorEmoji);
+        aFontList.AppendElement(kFontTwemojiMozilla);
     }
 
     aFontList.AppendElement(kFontLucidaGrande);
@@ -459,6 +461,7 @@ gfxPlatformMac::GetCommonFallbackFonts(uint32_t aCh, uint32_t aNextCh,
         if (p == 1) {
             if (b >= 0x1f0 && b < 0x1f7) {
                 aFontList.AppendElement(kFontAppleColorEmoji);
+                aFontList.AppendElement(kFontTwemojiMozilla);
             } else {
                 aFontList.AppendElement(kFontAppleSymbols);
                 aFontList.AppendElement(kFontSTIXGeneral);
@@ -540,6 +543,7 @@ gfxPlatformMac::GetCommonFallbackFonts(uint32_t aCh, uint32_t aNextCh,
             aFontList.AppendElement(kFontSTIXGeneral);
             aFontList.AppendElement(kFontGeneva);
             aFontList.AppendElement(kFontAppleColorEmoji);
+            aFontList.AppendElement(kFontTwemojiMozilla);
             break;
         case 0x2c:
             aFontList.AppendElement(kFontGeneva);
