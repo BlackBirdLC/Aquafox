@@ -51,6 +51,7 @@
 @RESPATH@/browser/defaults/profile/localstore.rdf
 @RESPATH@/browser/defaults/profile/mimeTypes.rdf
 @RESPATH@/dictionaries/*
+@RESPATH/fonts/*
 @RESPATH@/hyphenation/*
 @RESPATH@/browser/@PREF_DIR@/firefox-l10n.js
 #ifdef HAVE_MAKENSISU

@@ -2152,7 +2152,7 @@ gfxMacPlatformFontList::CreateFontInfoData()
 
 #ifdef MOZ_BUNDLED_FONTS
 
-void
+void 
 gfxMacPlatformFontList::ActivateBundledFonts()
 {
     nsCOMPtr<nsIFile> localDir;
@@ -2188,17 +2188,26 @@ gfxMacPlatformFontList::ActivateBundledFonts()
         if (NS_FAILED(file->GetNativePath(path))) {
             continue;
         }
-        CFURLRef fontURL =
-            ::CFURLCreateFromFileSystemRepresentation(kCFAllocatorDefault,
-                                                      (uint8_t*)path.get(),
-                                                      path.Length(),
-                                                      false);
+
+        NSURL *fontURL = [NSURL fileURLWithPath:[NSString stringWithCString:path.get() encoding:NSUTF8StringEncoding]];
         if (fontURL) {
-            CFErrorRef error = nullptr;
-            ::CTFontManagerRegisterFontsForURL(fontURL,
-                                               kCTFontManagerScopeProcess,
-                                               &error);
-            ::CFRelease(fontURL);
+            FSRef fsRef;
+            FSSpec fsSpec;
+            (void)CFURLGetFSRef((CFURLRef)fontURL, &fsRef);
+            OSStatus status = FSGetCatalogInfo(&fsRef, kFSCatInfoNone, NULL, NULL, &fsSpec, NULL);
+            if (status == noErr) {
+                status = ATSFontActivateFromFileSpecification(&fsSpec,
+                                                              kATSFontContextLocal,
+                                                              kATSFontFormatUnspecified,
+                                                              NULL,
+                                                              kATSOptionFlagsDefault,
+                                                              NULL);
+                if (status != noErr) {
+                    NSLog(@"Error %d loading font from %@", status, fontURL);
+                }
+            } else {
+                NSLog(@"Error loading catalog info");
+            }
         }
     }
 }
