@@ -336,6 +336,8 @@
 //    https://www.humansecurity.com/
         BLOK("perimeterx.net") ||
         BLOKD(".perimeterx.net") ||
+        BLOK("px-cloud.net") ||
+        BLOKD(".px-cloud.net") ||
 // iMedia
 //    http://www.imedia.cz
         BLOK("imedia.cz") ||
