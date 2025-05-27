@@ -480,10 +480,6 @@
 //    http://www.protected.media/
         BLOK("ad-score.com") ||
         BLOKD(".ad-score.com") ||
-// Radware
-//    https://www.radware.com/
-        BLOK("perfdrive.com") ||
-        BLOKD(".perfdrive.com") ||
 // RazorPay
 //    https://razorpay.com
         BLOK("thirdwatch.ai") ||
