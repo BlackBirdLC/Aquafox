@@ -2155,6 +2155,8 @@ gfxMacPlatformFontList::CreateFontInfoData()
 void 
 gfxMacPlatformFontList::ActivateBundledFonts()
 {
+    nsAutoreleasePool localPool;
+    
     nsCOMPtr<nsIFile> localDir;
     nsresult rv = NS_GetSpecialDirectory(NS_GRE_DIR, getter_AddRefs(localDir));
     if (NS_FAILED(rv)) {
