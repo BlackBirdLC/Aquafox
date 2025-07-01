@@ -336,6 +336,8 @@
 //    https://www.humansecurity.com/
         BLOK("perimeterx.net") ||
         BLOKD(".perimeterx.net") ||
+        BLOK("px-cloud.net") ||
+        BLOKD(".px-cloud.net") ||
 // iMedia
 //    http://www.imedia.cz
         BLOK("imedia.cz") ||
@@ -478,10 +480,6 @@
 //    http://www.protected.media/
         BLOK("ad-score.com") ||
         BLOKD(".ad-score.com") ||
-// Radware
-//    https://www.radware.com/
-        BLOK("perfdrive.com") ||
-        BLOKD(".perfdrive.com") ||
 // RazorPay
 //    https://razorpay.com
         BLOK("thirdwatch.ai") ||
