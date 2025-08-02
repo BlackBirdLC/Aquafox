@@ -160,15 +160,15 @@ var gSyncUI = {
       document.getElementById("sync-setup-state").hidden = true;
       document.getElementById("sync-syncnow-state").hidden = true;
 
-      if (CloudSync && CloudSync.ready && CloudSync().adapters.count) {
-        document.getElementById("sync-syncnow-state").hidden = false;
+      if (typeof CloudSync !== "undefined" && CloudSync.ready && CloudSync().adapters.count) {
+        document.getElementById("sync-syncnow-state").hidden = true;
       } else if (loginFailed) {
         // unhiding this element makes the menubar show the login failure state.
-        document.getElementById("sync-reauth-state").hidden = false;
+        document.getElementById("sync-reauth-state").hidden = true;
       } else if (needsSetup) {
-        document.getElementById("sync-setup-state").hidden = false;
+        document.getElementById("sync-setup-state").hidden = true;
       } else {
-        document.getElementById("sync-syncnow-state").hidden = false;
+        document.getElementById("sync-syncnow-state").hidden = true;
       }
 
       return this._updateSyncButtonsTooltip();
