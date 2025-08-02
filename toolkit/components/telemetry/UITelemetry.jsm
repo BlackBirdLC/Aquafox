@@ -27,6 +27,7 @@ this.UITelemetry = {
 
   // Lazily decide whether telemetry is enabled.
   get enabled() { return false;
+    /*
     if (this._enabled !== undefined) {
       return this._enabled;
     }
@@ -43,9 +44,11 @@ this.UITelemetry = {
     }
 
     return this._enabled;
+    */
   },
 
   observe: function(aSubject, aTopic, aData) { return;
+    /*
     if (aTopic == "profile-before-change") {
       Services.obs.removeObserver(this, "profile-before-change");
       Services.prefs.removeObserver(PREF_ENABLED, this);
@@ -67,6 +70,7 @@ this.UITelemetry = {
           break;
       }
     }
+    */
   },
 
   /**

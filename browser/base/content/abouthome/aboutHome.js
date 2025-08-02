@@ -236,7 +236,8 @@ function loadCompleted()
  */
 function loadSnippets()
 {
-return; // Temporarily disabled until we do our own. TenFourFox issue 363.
+  return; // Temporarily disabled until we do our own. TenFourFox issue 363.
+  /*
   if (!gSnippetsMap)
     throw new Error("Snippets map has not properly been initialized");
 
@@ -284,6 +285,7 @@ return; // Temporarily disabled until we do our own. TenFourFox issue 363.
     showSnippets();
     loadCompleted();
   }
+  */
 }
 
 /**
