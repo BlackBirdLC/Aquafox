@@ -261,6 +261,15 @@ this.XPCOMUtils = {
                                    aObject, aName, aResource, aSymbol,
                                    aPreLambda, aPostLambda, aProxy)
   {
+    // Prevent disabled modules from loading
+    const disabled = [
+      "resource://gre/modules/Metrics.jsm",
+    ];
+
+    if (disabled.includes(aResource)) {
+      return {};
+    }
+
     let proxy = aProxy || {};
 
     if (typeof(aPreLambda) === "function") {
