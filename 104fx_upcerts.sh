@@ -10,7 +10,7 @@ endif
 # if we update NSS, we need to remove that patch (TenFourFox issue 512).
 
 set verbose
-set release_url=https://hg.mozilla.org/releases/mozilla-esr128/raw-file/tip/
+set release_url=https://hg-edge.mozilla.org/releases/mozilla-esr140/raw-file/c2cc55e4c6ab5f0b8d99ec3e60fdf742c4d8ff65/
 
 # self test to ensure certificates and encryption methods are correct
 curl ${release_url}/config/milestone.txt || exit
@@ -18,6 +18,6 @@ curl ${release_url}/config/milestone.txt || exit
 curl ${release_url}/security/manager/ssl/StaticHPKPins.h > security/manager/ssl/StaticHPKPins.h
 curl ${release_url}/security/nss/lib/ckfw/builtins/certdata.txt > security/nss/lib/ckfw/builtins/certdata.txt
 curl ${release_url}/netwerk/dns/effective_tld_names.dat > netwerk/dns/effective_tld_names.dat
-curl ${release_url}/security/manager/ssl/nsSTSPreloadList.inc | perl ./104fx_import_esr128_stspreload.pl > security/manager/ssl/nsSTSPreloadList.inc
+curl ${release_url}/security/manager/ssl/nsSTSPreloadList.inc | perl ./104fx_import_esr140_stspreload.pl > security/manager/ssl/nsSTSPreloadList.inc
 perl ./104fx_import_shavar_cryptominers.pl > caps/shavar-blocklist.h
 
