@@ -337,6 +337,7 @@ var TelemetryReportingPolicyImpl = {
    * @return {Boolean} True if we are allowed to upload data, false otherwise.
    */
   canUpload: function() { return false;
+    /*
     // If data submission is disabled, there's no point in showing the infobar. Just
     // forbid to upload.
     if (!this.dataSubmissionEnabled) {
@@ -347,6 +348,7 @@ var TelemetryReportingPolicyImpl = {
     // the policy.
     const bypassNotification = Preferences.get(PREF_BYPASS_NOTIFICATION, false);
     return this.isUserNotifiedOfCurrentPolicy || bypassNotification;
+    */
   },
 
   /**

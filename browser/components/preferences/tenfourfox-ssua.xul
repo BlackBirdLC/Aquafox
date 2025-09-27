@@ -59,23 +59,36 @@
           <hbox pack="end">
             <label>&TFFsiteSpecificUAs.preua;</label>
           </hbox>
-          <menulist id="uaBox" crop="end" flex="1"
+          <menulist id="uaBox" flex="1"
                     oncommand="gTenFourFoxSSUAManager.fillUA(event.target);">
             <menupopup>
               <menuitem label="" value=""/>
-              <menuitem label="Firefox 128ESR (Intel)" value="fx128"/>
-              <menuitem label="Firefox 115ESR (Intel)" value="fx115"/>
-              <menuitem label="Firefox 102ESR (Intel)" value="fx102"/>
-              <menuitem label="Firefox 91ESR (Intel)" value="fx91"/>
-              <menuitem label="Firefox 78ESR (Intel)" value="fx78"/>
-              <menuitem label="Firefox 68ESR (Intel)" value="fx68"/>
-              <menuitem label="Firefox 60ESR (Intel)" value="fx60"/>
-              <menuitem label="Firefox 52ESR (Intel)" value="fx"/>
-              <menuitem label="Classilla 9.3.x" value="classilla"/>
-              <menuitem label="Internet Explorer 8" value="ie8"/>
-              <menuitem label="Internet Explorer 11" value="ie11"/>
+              <menuseparator/>
+              <menuitem label="Latest Chrome" value="chrome"/>
+              <menuitem label="Latest Firefox" value="firefox"/>
+              <menuitem label="Latest Safari" value="safari"/>
+              <menuseparator/>
+              <menuitem label="Aquaweb Micro" value="aquaweb"/>
+              <menuitem label="KaiOS" value="kaios"/>
               <menuitem label="Android Chrome" value="android"/>
               <menuitem label="iOS Safari (iPad)" value="ipad"/>
+              <menuseparator/>
+              <menuitem label="Arctic Fox PPC" value="arcticfox"/>
+              <menuitem label="DarkWeb" value="darkweb"/>
+              <menuitem label="Classilla 9.3.x" value="classilla"/>
+              <menuseparator/>
+              <menuitem label="Internet Explorer 8" value="ie8"/>
+              <menuitem label="Internet Explorer 11" value="ie11"/>
+              <menuseparator/>
+              <menuitem label="Firefox ESR 52" value="fx"/>
+              <menuitem label="Firefox ESR 60" value="fx60"/>
+              <menuitem label="Firefox ESR 68" value="fx68"/>
+              <menuitem label="Firefox ESR 78" value="fx78"/>
+              <menuitem label="Firefox ESR 91" value="fx91"/>
+              <menuitem label="Firefox ESR 102" value="fx102"/>
+              <menuitem label="Firefox ESR 115" value="fx115"/>
+              <menuitem label="Firefox ESR 128" value="fx128"/>
+              <menuitem label="Firefox ESR 140" value="fx140"/>
             </menupopup>
           </menulist>
         </row>

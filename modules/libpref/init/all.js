@@ -3583,6 +3583,9 @@ pref("font.name.monospace.x-math", "Courier");
 pref("font.name.cursive.x-math", "Apple Chancery");
 pref("font.name.fantasy.x-math", "Papyrus");
 
+pref("font.name-list.emoji", "Apple Color Emoji");
+pref("font.name-list.emoji", "Twemoji Mozilla");
+
 // individual font faces to be treated as independent families
 // names are Postscript names of each face
 pref("font.single-face-list", "Osaka-Mono");
@@ -4149,7 +4152,7 @@ pref("image.decode-immediately.enabled", false);
 pref("image.downscale-during-decode.enabled", true);
 
 // The default Accept header sent for images loaded over HTTP(S)
-pref("image.http.accept", "image/png,image/*;q=0.8,*/*;q=0.5");
+pref("image.http.accept", "image/png,image/svg+xml,image/webp,*/*;q=0.8");
 
 // The threshold for inferring that changes to an <img> element's |src|
 // attribute by JavaScript represent an animation, in milliseconds. If the |src|

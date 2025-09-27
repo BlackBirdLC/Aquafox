@@ -715,23 +715,7 @@ function setupCheckForUpdates(checkForUpdates, aStringBundle)
 
 function buildHelpMenu()
 {
-  // Enable/disable the "Report Web Forgery" menu item.
-  if (typeof gSafeBrowsing != "undefined" && AppConstants.MOZ_SAFE_BROWSING)
-    gSafeBrowsing.setReportPhishingMenu();
-
-#ifdef XP_MACOSX
-#ifdef MOZ_UPDATER
-  var checkForUpdates = document.getElementById("checkForUpdates");
-  var browserBundle = document.getElementById("bundle_browser").stringBundle;
-  setupCheckForUpdates(checkForUpdates, browserBundle);
-#else  
-  // Needed by safebrowsing for inserting its menuitem so just hide it
-  document.getElementById("updateSeparator").hidden = true;
-#endif
-#else
-  // Needed by safebrowsing for inserting its menuitem so just hide it
-  document.getElementById("updateSeparator").hidden = true;
-#endif
+  // Since MOZ_UPDATER and MOZ_SAFE_BROWSING are disabled, we don't need to check for or interact with updateSeparator.
 }
 
 function isElementVisible(aElement)

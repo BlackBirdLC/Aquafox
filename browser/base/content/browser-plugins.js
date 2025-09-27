@@ -216,6 +216,7 @@ return; // never ever
     // that the browser's content now has assigned (ie, the browser has browsed away
     // after the message was sent, but before the message was received). In that case,
     // we should just ignore the message.
+    /*
     if (!principal.equals(browser.contentPrincipal)) {
       return;
     }
@@ -293,6 +294,7 @@ return; // never ever
                             "", "plugins-notification-icon",
                             null, null, options);
     browser.messageManager.sendAsyncMessage("BrowserPlugins:NotificationShown");
+    */
   },
 
   removeNotification: function (browser, name) {
