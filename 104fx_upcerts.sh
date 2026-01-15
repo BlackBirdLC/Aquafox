@@ -10,7 +10,7 @@ endif
 # if we update NSS, we need to remove that patch (TenFourFox issue 512).
 
 set verbose
-set release_url=https://hg-edge.mozilla.org/releases/mozilla-esr140/raw-file/18556c0b079c839f4d15597a57b0f048fdadcedd/
+set release_url=https://hg-edge.mozilla.org/releases/mozilla-esr140/raw-file/82e96a128bf5e3e7dd6e5180c9528f623ba5e0f7/
 
 # self test to ensure certificates and encryption methods are correct
 curl ${release_url}/config/milestone.txt || exit
