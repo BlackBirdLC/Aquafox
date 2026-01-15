@@ -49,7 +49,7 @@
 <!ENTITY helpus.getInvolvedLink     "get involved!">
 <!ENTITY helpus.end                 "">
 
-<!ENTITY copyright.blurb            "Copyright © 2010-2025 Contributors to TenFourFox. Copyright © 2024-2025 Maintainers of Aquafox. All rights reserved.">
+<!ENTITY copyright.blurb            "Copyright © 2010-2025 Contributors to TenFourFox. Copyright © 2024-2026 Maintainers of Aquafox. All rights reserved.">
 
 <!-- LOCALIZATION NOTE (bottomLinks.license): This is a link title that links to about:license. -->
 <!ENTITY bottomLinks.license        "Licensing Information">
