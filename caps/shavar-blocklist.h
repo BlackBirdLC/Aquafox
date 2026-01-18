@@ -210,10 +210,6 @@
 //    http://www.brightedge.com/
         BLOK("b0e8.com") ||
         BLOKD(".b0e8.com") ||
-// BrowserAnalytic
-//    https://browseranalytic.com
-        BLOK("browseranalytic.com") ||
-        BLOKD(".browseranalytic.com") ||
 // Buzzoola
 //    https://www.buzzoola.com/en/
         BLOK("buzzoola.com") ||
@@ -312,10 +308,6 @@
 //    https://friends2follow.com/
         BLOK("antifraudjs.friends2follow.com") ||
         BLOKD(".antifraudjs.friends2follow.com") ||
-// GeeTest
-//    https://www.geetest.com/en/
-        BLOK("geetest.com") ||
-        BLOKD(".geetest.com") ||
 // Gleam
 //    https://gleam.io/
         BLOK("fraudjs.io") ||
@@ -332,12 +324,6 @@
 //    https://www.hotelchamp.com
         BLOK("hotelchamp.com") ||
         BLOKD(".hotelchamp.com") ||
-// HumanSecurity
-//    https://www.humansecurity.com/
-        BLOK("perimeterx.net") ||
-        BLOKD(".perimeterx.net") ||
-        BLOK("px-cloud.net") ||
-        BLOKD(".px-cloud.net") ||
 // iMedia
 //    http://www.imedia.cz
         BLOK("imedia.cz") ||
@@ -354,10 +340,6 @@
 //    https://intent.ly/en/
         BLOK("smct.io") ||
         BLOKD(".smct.io") ||
-// IntuitionMachines
-//    https://www.imachines.com/
-        BLOK("hcaptcha.com") ||
-        BLOKD(".hcaptcha.com") ||
 // iShumei
 //    https://www.ishumei.com/
         BLOK("fengkongcloud.com") ||
@@ -430,14 +412,6 @@
 //    http://www.negishim.org
         BLOK("negishim.org") ||
         BLOKD(".negishim.org") ||
-// NoFraud
-//    https://www.nofraud.com/
-        BLOK("nofraud.com") ||
-        BLOKD(".nofraud.com") ||
-// Noto
-//    https://notolytix.com/
-        BLOK("notolytix.com") ||
-        BLOKD(".notolytix.com") ||
 // OneAd
 //    https://www.onead.com.tw/
         BLOK("guoshipartners.com") ||
@@ -460,10 +434,6 @@
 //    https://www.partypoker.com/
         BLOK("iivt.com") ||
         BLOKD(".iivt.com") ||
-// Paypal
-//    https://www.paypal.com
-        BLOK("simility.com") ||
-        BLOKD(".simility.com") ||
 // PixAnalytics
 //    https://pixanalytics.com/
         BLOK("pixanalytics.com") ||
@@ -512,16 +482,6 @@
 //    http://shorte.st/
         BLOK("shorte.st") ||
         BLOKD(".shorte.st") ||
-// SiftScience
-//    https://sift.com/
-        BLOK("sift.com") ||
-        BLOKD(".sift.com") ||
-        BLOK("siftscience.com") ||
-        BLOKD(".siftscience.com") ||
-// Signifyd
-//    https://www.signifyd.com/
-        BLOK("signifyd.com") ||
-        BLOKD(".signifyd.com") ||
 // Smi
 //    http://24smi.net
         BLOK("24smi.net") ||
