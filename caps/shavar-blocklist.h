@@ -1,9 +1,29 @@
+// 888new
+//    https://novosoft.us.com
+        BLOK("analytics.blue") ||
+        BLOKD(".analytics.blue") ||
+        BLOK("feesocrald.com") ||
+        BLOKD(".feesocrald.com") ||
+        BLOK("gramombird.com") ||
+        BLOKD(".gramombird.com") ||
+        BLOK("istlandoll.com") ||
+        BLOKD(".istlandoll.com") ||
+        BLOK("mepirtedic.com") ||
+        BLOKD(".mepirtedic.com") ||
+        BLOK("pampopholf.com") ||
+        BLOKD(".pampopholf.com") ||
+        BLOK("tulip18.com") ||
+        BLOKD(".tulip18.com") ||
 // a.js
 //    http://zymerget.bid
         BLOK("flightzy.date") ||
         BLOKD(".flightzy.date") ||
         BLOK("zymerget.bid") ||
         BLOKD(".zymerget.bid") ||
+// adless.io
+//    https://adless.io
+        BLOK("adless.io") ||
+        BLOKD(".adless.io") ||
 // AuthedMine
 //    https://authedmine.com
         BLOK("authedmine.com") ||
@@ -30,8 +50,6 @@
         BLOKD(".crypto-loot.com") ||
         BLOK("gitgrub.pro") ||
         BLOKD(".gitgrub.pro") ||
-        BLOK("reauthenticator.com") ||
-        BLOKD(".reauthenticator.com") ||
         BLOK("statdynamic.com") ||
         BLOKD(".statdynamic.com") ||
         BLOK("webmine.pro") ||
@@ -42,10 +60,6 @@
         BLOKD(".crypto-webminer.com") ||
         BLOK("ethtrader.de") ||
         BLOKD(".ethtrader.de") ||
-// Gridcash
-//    https://www.gridcash.net/
-        BLOK("adless.io") ||
-        BLOKD(".adless.io") ||
 // JSE
 //    http://jsecoin.com
         BLOK("freecontent.date") ||
@@ -60,42 +74,10 @@
         BLOKD(".hostingcloud.science") ||
         BLOK("jsecoin.com") ||
         BLOKD(".jsecoin.com") ||
-// MinerAlt
-//    http://mineralt.io
-        BLOK("analytics.blue") ||
-        BLOKD(".analytics.blue") ||
-        BLOK("besstahete.info") ||
-        BLOKD(".besstahete.info") ||
-        BLOK("feesocrald.com") ||
-        BLOKD(".feesocrald.com") ||
-        BLOK("gramombird.com") ||
-        BLOKD(".gramombird.com") ||
-        BLOK("istlandoll.com") ||
-        BLOKD(".istlandoll.com") ||
-        BLOK("mepirtedic.com") ||
-        BLOKD(".mepirtedic.com") ||
-        BLOK("pampopholf.com") ||
-        BLOKD(".pampopholf.com") ||
-        BLOK("tercabilis.info") ||
-        BLOKD(".tercabilis.info") ||
-        BLOK("tulip18.com") ||
-        BLOKD(".tulip18.com") ||
-// Minescripts
-//    http://minescripts.info
-        BLOK("minescripts.info") ||
-        BLOKD(".minescripts.info") ||
-// NeroHut
-//    https://nerohut.com
-        BLOK("nerohut.com") ||
-        BLOKD(".nerohut.com") ||
 // Service4refresh
 //    https://service4refresh.info
         BLOK("service4refresh.info") ||
         BLOKD(".service4refresh.info") ||
-// SpareChange
-//    http://sparechange.io
-        BLOK("sparechange.io") ||
-        BLOKD(".sparechange.io") ||
 // SwiftMining
 //    https://swiftmining.win/
         BLOK("swiftmining.win") ||
@@ -110,10 +92,6 @@
 //    http://webminepool.com
         BLOK("webminepool.com") ||
         BLOKD(".webminepool.com") ||
-// Webmining
-//    https://webmining.co/
-        BLOK("webmining.co") ||
-        BLOKD(".webmining.co") ||
 // Adbot
 //    https://adbot.tw/
         BLOK("adbot.tw") ||
