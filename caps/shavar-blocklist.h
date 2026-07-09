@@ -105,9 +105,9 @@
         BLOK("7ool.net") ||
         BLOKD(".7ool.net") ||
 // 91App
-//    https://91app.com
-        BLOK("91app.com") ||
-        BLOKD(".91app.com") ||
+//    https://91app.com/
+        BLOK("tracking-client.91app.com") ||
+        BLOKD(".tracking-client.91app.com") ||
 // a4cdn.org
 //    https://a4cdn.org
         BLOK("a4cdn.org") ||
@@ -530,6 +530,10 @@
 //    https://www.clearlink.com/
         BLOK("clearlink.com") ||
         BLOKD(".clearlink.com") ||
+// Clickadu
+//    https://clickadu.com/
+        BLOK("demandingoverdriveunthread.com") ||
+        BLOKD(".demandingoverdriveunthread.com") ||
 // Clickayab
 //    http://www.clickyab.com
         BLOK("clickyab.com") ||
@@ -624,10 +628,6 @@
 //    http://bob.dmpxs.com
         BLOK("dmpxs.com") ||
         BLOKD(".dmpxs.com") ||
-// dnofd.com
-//    https://dnofd.com
-        BLOK("dnofd.com") ||
-        BLOKD(".dnofd.com") ||
 // duube1y6ojsji.cloudfront.net
 //    https://duube1y6ojsji.cloudfront.net
         BLOK("duube1y6ojsji.cloudfront.net") ||
@@ -816,6 +816,10 @@
 //    https://itch.io/
         BLOK("itch.io") ||
         BLOKD(".itch.io") ||
+// Janusaent
+//    https://janusaent.com/
+        BLOK("janusaent.com") ||
+        BLOKD(".janusaent.com") ||
 // Jennydanny.com
 //    https://jennydanny.com
         BLOK("news.jennydanny.com") ||
@@ -928,10 +932,6 @@
 //    https://mocortech.com
         BLOK("static.mocortech.com") ||
         BLOKD(".static.mocortech.com") ||
-// Multi Media LLC
-//    https://multimediallc.com/
-        BLOK("web.static.mmcdn.com") ||
-        BLOKD(".web.static.mmcdn.com") ||
 // mysalo.store
 //    https://mysalo.store
         BLOK("a.mysalo.store") ||

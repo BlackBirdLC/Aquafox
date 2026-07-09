@@ -1,6 +1,6 @@
 #!/bin/csh -f
 
-set root=https://hg-edge.mozilla.org/releases/mozilla-esr140/raw-file/a24e9e115e02794f72dab9ef6081244403b0183a/intl/icu/source/data/misc
+set root=https://hg-edge.mozilla.org/releases/mozilla-esr140/raw-file/6220f392be743517c45c0a46b455d7a57c0b9891/intl/icu/source/data/misc
 
 set verbose
 cd intl/icu/source/data/misc || exit
