@@ -67,9 +67,9 @@ var gTenFourFoxPane = {
   // Keep in sync with tenfourfox-ssua.xul and tenfourfox.xul
   validUA : {
       // current chrome, firefox, and safari
-      "chrome" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
-      "firefox" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 15.7; rv:150.0) Gecko/20100101 Firefox/150.0",
-      "safari" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 15_7_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Safari/605.1.15",
+      "chrome" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 15_7_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "firefox" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 15.7; rv:153.0) Gecko/20100101 Firefox/153.0",
+      "safari" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 15_7_8) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Safari/605.1.15",
       // alternative user-agents
       "aquaweb" : "Mozilla/5.0 (Linux; Android 4.4.4) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36",
       "kaios" : "Mozilla/5.0 (Mobile; rv:48.0) Gecko/48.0 Firefox/48.0 KAIOS/2.0",
