@@ -252,10 +252,6 @@
 //    https://alpharank.ai
         BLOK("api.alpharank.io") ||
         BLOKD(".api.alpharank.io") ||
-// Alpine IQ
-//    https://aiq.com
-        BLOK("lab.alpineiq.com") ||
-        BLOKD(".lab.alpineiq.com") ||
 // Amazon
 //    https://www.amazon.com/
         BLOK("4e7d2b3cdfc7.edge.sdk.awswaf.com") ||
@@ -526,14 +522,24 @@
         BLOKD(".yougreencolumn.com") ||
         BLOK("youseasky.com") ||
         BLOKD(".youseasky.com") ||
+// Clay
+//    https://clay.com/
+        BLOK("claydar.com") ||
+        BLOKD(".claydar.com") ||
 // ClearLink
 //    https://www.clearlink.com/
         BLOK("clearlink.com") ||
         BLOKD(".clearlink.com") ||
 // Clickadu
 //    https://clickadu.com/
+        BLOK("campfirecroutondecorator.com") ||
+        BLOKD(".campfirecroutondecorator.com") ||
+        BLOK("deductgreedyheadroom.com") ||
+        BLOKD(".deductgreedyheadroom.com") ||
         BLOK("demandingoverdriveunthread.com") ||
         BLOKD(".demandingoverdriveunthread.com") ||
+        BLOK("earmuffpostnasalrisotto.com") ||
+        BLOKD(".earmuffpostnasalrisotto.com") ||
 // Clickayab
 //    http://www.clickyab.com
         BLOK("clickyab.com") ||
@@ -714,10 +720,6 @@
 //    https://gbqofs.com
         BLOK("cdn.gbqofs.com") ||
         BLOKD(".cdn.gbqofs.com") ||
-// GCN Publishing
-//    https://one-count.com
-        BLOK("validate.onecount.net") ||
-        BLOKD(".validate.onecount.net") ||
 // getdeviceinf.com
 //    https://getdeviceinf.com
         BLOK("cdn.getdeviceinf.com") ||
@@ -992,6 +994,10 @@
 //    https://track.onef.pro
         BLOK("onef.pro") ||
         BLOKD(".onef.pro") ||
+// OpenWeb
+//    https://openweb.com/
+        BLOK("monti-config.bqstreamer.com") ||
+        BLOKD(".monti-config.bqstreamer.com") ||
 // opin.media
 //    https://opin.media
         BLOK("jssdk.opin.media") ||
@@ -1001,9 +1007,7 @@
         BLOK("othersides.top") ||
         BLOKD(".othersides.top") ||
 // Overwolf
-//    https://overwolf.com
-        BLOK("nsure.tebex.io") ||
-        BLOKD(".nsure.tebex.io") ||
+//    https://overwolf.com/
         BLOK("s.nitropay.com") ||
         BLOKD(".s.nitropay.com") ||
 // PartyPoker
@@ -1082,10 +1086,6 @@
 //    https://rxayc.com
         BLOK("rxayc.com") ||
         BLOKD(".rxayc.com") ||
-// SALESmanago
-//    https://salesmanago.com
-        BLOK("salesmanago.com") ||
-        BLOKD(".salesmanago.com") ||
 // Samhub
 //    https://samhub.io
         BLOK("dep-x.com") ||
